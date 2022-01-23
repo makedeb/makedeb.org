@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	{{- partial "head.html" . -}}
+	<body>
+        	{{- partial "header.html" . -}}
+		<div class="homepage-body">
+			<div class="homepage-fill">
+				<p class="big-text">A simplicity-focused packaging tool for Debian archives</p>
+				<p class="normal-text">makedeb takes everything developers love about targeting Debian, and makes the packaging easier, more enjoyable, and more maintainable.</p>
+				<div class="install-button"><a href="https://makedeb.{{ .Site.Params.hw_url }}/home/installing/release-types/"><button>Install</button></a></div>
+			</div>
+			<div class="facts">
+				<div class="example-section">
+					<h2>Minimalistic</h2>
+					<p>By design, makedeb tries to get out the way of the user, and let them focus on what they're trying to do, package.</p>
+				</div>
+				<div class="example-section">
+					<h2>Powerful</h2>
+					<p>Even with the approach makedeb goes with, makedeb still provides the user with powerful features when they need them, allowing them to handle edge cases where certain features are just needed.
+				</div>
+				<div class="example-section">
+					<h2>It's All Bash</h2>
+					<p>makedeb's packaging format is simply a shell script with some variables and functions that tell makedeb what to do. This unlocks the full potential that you'd see in a shell, right inside of your packaging setups.</p>
+				</div>
+				<div class="example-section">
+					<h2>Minimalistic</h2>
+					<p>makedeb gives you an easy-to-look-at syntax for your build instructions, making everything easier for contributitors, easier to integrate into your existing setups, and ultimately more maintainable for you.</p>
+				</div>
+			</div>
+			<div class="ready-for-production">
+				<h2>Ready for Production.</h2>
+				<p>makedeb is already being used by various groups to create and package their Debian applications, including:</p>
+				<div class="groups-using-makedeb">
+					<a href="https://www.authelia.com/"><img src="media/authelia-logo.png"></a>
+				</div>
+			</div>
+		</div>
+        	{{- partial "footer.html" . -}}
+	</body>
+</html>

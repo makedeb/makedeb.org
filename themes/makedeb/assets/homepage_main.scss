@@ -1,0 +1,112 @@
+$max-main-width: 1200px;
+$phone-width: 550px;
+
+.homepage-body {
+	// We use this so the footer stays at the bottom when the viewport height is really large. I just played around with the em value until it looked right.
+	min-height: calc(100vh - 7.35em);
+}
+
+.homepage-fill {
+	background-color: $white;
+	height: 100%;
+	padding: 10em 20% 2.5em;
+
+	@media (max-width: $phone-width) {
+		padding: 5em 10% 2.5em;
+	}
+
+	.big-text, .normal-text, .install-button {
+		width: 100%;
+		padding-bottom: 1.25rem;
+		text-align: center;
+	}
+
+	.big-text {
+		font-size: 3em;
+		line-height: 1.1em;
+	}
+
+	.normal-text {
+		font-size: 1.5em;
+		color: $inactive-link;
+		padding-bottom: 2em;
+	}
+	
+	.install-button a button {
+		border-style: none;
+		width: 8em;
+		height: 3em;
+		font-size: 1.15em;
+		border-radius: 0.125em;
+		transition-property: background-color;
+		transition-duration: 0.2s;
+	}
+
+	.install-button a button:hover {
+		cursor: pointer;
+	}
+}
+
+.facts {
+	background-color: $silver;
+	padding: 2em 25% 3.4em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: auto;
+	
+	@media (max-width: $phone-width) {
+		padding: 2em 0% 3.4em;
+	}
+
+	@media (max-width: $max-main-width) {
+		grid-template-columns: 1fr;
+	}
+
+	.example-section {
+		padding-bottom: 1.4em;
+		
+		* {
+			text-align: center;
+		}
+
+		h2 {
+			font-size: 2em;
+			padding-bottom: 0.3em;
+		}
+
+		p {
+			padding: 0 15%;
+			line-height: 1.3em;
+		}
+	}
+}
+
+
+.ready-for-production {
+	background-color: $white;
+	padding: 2em 0 4em;
+	
+	h2, p {
+		text-align: center;
+		padding: 0 15% 0.5em;
+	}
+
+	h2 {
+		font-size: 2.7em;
+	}
+
+	p {
+		font-size: 1.2em;
+	}
+
+	.groups-using-makedeb {
+		display: flex;
+		justify-content: center;
+		padding-top: 1em;
+
+		a * {
+			width: 15rem;
+			height: auto;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+baseURL = "http://makedeb.org/"
+languageCode = "en-us"
+title = "makedeb"
+theme = "makedeb"
+
+[params]
+	hw_url = "hunterwittenborn.com"
+	makedeb_url = "makedeb.org"

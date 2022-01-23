@@ -1,0 +1,9 @@
+<head>
+	{{ if .Page.IsHome }}
+	<title>{{ .Site.Title }} - A simplicity-focused packaging tool for Debian archives</title>
+	{{ else }}
+	<title>{{ .Page.Title }} | {{ .Site.Title }}</title>
+	{{ end }}
+	{{ $style := resources.Get "main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>

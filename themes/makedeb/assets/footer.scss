@@ -1,0 +1,53 @@
+@import "variables";
+
+$footer-max-width: 640px;
+
+footer {
+	height: 100%;
+	padding: 1em 0 1em 0.7em;
+	background-color: $dark-grey;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	@media (max-width: $footer-max-width) {
+		grid-template-columns: 1fr;
+	}
+
+	p {
+		color: $light-grey;
+	}
+
+	.copyright {
+		align-self: center;
+
+		p {
+			font-size: 1.1em;
+		}
+	}
+
+	.links {
+		align-self: center;
+		justify-self: end;
+		
+		a {
+			color: $light-grey;
+			font-size: 1.1em;
+			padding-right: 1em;
+			transition-property: color;
+			transition-duration: 0.2s;
+		}
+
+		a:hover {
+			color: $light-orange;
+		}
+
+		@media (max-width: $footer-max-width) {
+			justify-self: start;
+			padding-top: 0.8em;
+
+			a {
+				padding-right: 0.6em;
+			}
+		}
+	}
+}
