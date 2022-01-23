@@ -1,9 +1,11 @@
 <head>
 	{{ if .Page.IsHome }}
-	<title>{{ .Site.Title }} - A simplicity-focused packaging tool for Debian archives</title>
+	<title>{{ .Site.Title }} - {{ .Site.Params.site_desc }}</title>
+	<meta name="description" content="{{ .Site.Params.site_desc }}.">
 	{{ else }}
 	<title>{{ .Page.Title }} | {{ .Site.Title }}</title>
 	{{ end }}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	{{ $style := resources.Get "main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 	<link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>

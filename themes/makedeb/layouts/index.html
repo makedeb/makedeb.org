@@ -5,7 +5,7 @@
         	{{- partial "header.html" . -}}
 		<div class="homepage-body">
 			<div class="homepage-fill">
-				<p class="big-text">A simplicity-focused packaging tool for Debian archives</p>
+				<p class="big-text">{{ .Site.Params.site_desc }}</p>
 				<p class="normal-text">makedeb takes everything developers love about targeting Debian/Ubuntu based distributions, and makes the packaging easier, more enjoyable, and more maintainable.</p>
 				<div class="install-button"><a href="https://docs.{{ .Site.Params.makedeb_url }}/home/installing/release-types/"><button>Install</button></a></div>
 			</div>
