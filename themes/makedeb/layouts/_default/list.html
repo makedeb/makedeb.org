@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	{{- partial "head.html" . -}}
+	<body>
+        	{{- partial "header.html" . -}}
+
+		<div class="content-section">
+			{{ $section := .Section }}
+
+			<h1>{{ $section | title }}</h1>
+			{{ range .Site.RegularPages }}
+			{{ if eq .Section $section }}
+			<div class="post-card">
+				<p class="date">{{ .Date | time.Format "Monday, Jan 2, 2006" }}</p>
+				<a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+				<a class="read-more" href="{{ .RelPermalink }}">Read more...</a>
+			{{ end }}
+			{{ end }}
+			</div>
+		</div>
+		{{- partial "footer.html" . -}}
+	</body>
+</html>

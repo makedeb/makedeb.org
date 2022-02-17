@@ -2,6 +2,9 @@
 @import "header";
 @import "footer";
 @import "homepage_main";
+@import "404";
+@import "post";
+@import "content-section";
 
 // External CSS.
 @import url('https://meyerweb.com/eric/tools/css/reset/reset.css');
@@ -17,4 +20,32 @@ body {
 a, a:visited {
 	color: $orange;
 	text-decoration: none;
+	transition: color 0.2s;
+}
+
+a:hover {
+	color: lighten($orange, 8%);
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
+
+li::before {
+	content: "- ";
+}
+
+// Ensures the footer is (at minimum) at the bottom of the viewport.
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+footer {
+	margin-top: auto;
 }

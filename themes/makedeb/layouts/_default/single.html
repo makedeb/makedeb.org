@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	{{- partial "head.html" . -}}
+	<body>
+        	{{- partial "header.html" . -}}
+		<div class="post">
+			<h1 class="title">{{ .Title }}</h1><br>
+			<p class="date">Published {{ .Date | time.Format "Monday, Jan 2, 2006" }}</p>
+			<hr>
+
+			<div class="content">
+				{{ .Content }}
+			</div>
+			<hr class="closing-hr">
+
+			<div class="author">
+				<img src="/media/profile-pictures/{{ index .Params.author 1 }}">
+				<p class="author-name">{{ index .Params.author 0 }}</p>
+				<p>
+			</div>
+
+		</div>
+        	{{- partial "footer.html" . -}}
+	</body>
+</html>

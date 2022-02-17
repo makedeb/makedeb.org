@@ -1,11 +1,6 @@
 $max-main-width: 1200px;
 $phone-width: 550px;
 
-.homepage-body {
-	// We use this so the footer stays at the bottom when the viewport height is really large. I just played around with the em value until it looked right.
-	min-height: calc(100vh - 7.35em);
-}
-
 .homepage-fill {
 	background-color: $white;
 	height: 100%;

@@ -1,0 +1,43 @@
+@import "variables";
+
+.content-section {
+	margin: 2em;
+	
+	h1 {
+		font-size: 2em;
+		padding-bottom: 0.6em;
+	}
+
+	.post-card {
+		height: auto;
+		border: solid;
+		border-color: darken($silver, 10%);
+		border-width: 0.15em;
+		background-color: $silver;
+		border-radius: 0.2em;
+		padding: 1em 0.5em;
+		display: flex;
+		flex-direction: column;
+
+		.date {
+			font-size: 0.9em;
+			padding-bottom: 0.5em;
+			color: lighten($dark-grey, 40%);
+		}
+
+		.title {
+			font-size: 1.4em;
+			padding-bottom: 0.5em;
+		}
+		
+		.title, .read-more {
+			color: $dark-grey;
+			transition: color 0.2s;
+			width: fit-content;
+		}
+
+		.title:hover, .read-more:hover {
+			color: $orange;
+		}
+	}
+}
