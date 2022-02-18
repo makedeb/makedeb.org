@@ -1,6 +1,6 @@
 baseURL = "https://www.makedeb.org/"
 languageCode = "en-us"
-title = "makedeb"
+title = "makedebs"
 theme = "makedeb"
 
 [params]
