@@ -6,8 +6,11 @@
 
 		<div class="content-section">
 			{{ $section := .Section }}
-
-			<h1>{{ $section | title }}</h1>
+			
+			<div class="header">
+				<h1>{{ $section | title }}</h1>
+				<a href="{{ .RelPermalink }}index.xml">{{ partial "media/rss.svg" . }}</a>
+			</div>
 			{{ range .Site.RegularPages }}
 			{{ if eq .Section $section }}
 			<div class="post-card">
