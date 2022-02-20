@@ -14,7 +14,7 @@ local buildAndPublish() = {
         commands: [
             "sudo apt-get update",
             "sudo apt-get install git -y",
-            "chown 'makedeb:makedeb' ./ -R",
+            "sudo chown 'makedeb:makedeb' ./ -R",
             "git clone \"https://$${mpr_url}/go-bin\"",
             "git clone \"https://$${mpr_url}/hugo\"",
             "cd go-bin/; makedeb -si --no-confirm; cd ../",
