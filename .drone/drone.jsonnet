@@ -17,8 +17,8 @@ local buildAndPublish() = {
             "chown 'makedeb:makedeb' ./ -R",
             "git clone \"https://$${mpr_url}/go-bin\"",
             "git clone \"https://$${mpr_url}/hugo\"",
-            "cd go-bin/; makedeb -si; cd ../",
-            "cd hugo/; makedeb -di; cd ../",
+            "cd go-bin/; makedeb -si --no-confirm; cd ../",
+            "cd hugo/; makedeb -di --no-confirm; cd ../",
             "hugo -d /var/www/makedeb.org"
         ]
     }]
