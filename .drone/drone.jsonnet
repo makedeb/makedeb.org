@@ -19,7 +19,7 @@ local buildAndPublish() = {
             "git clone \"https://$${mpr_url}/hugo\"",
             "cd go-bin/; makedeb -si --no-confirm; cd ../",
             "cd hugo/; makedeb -di --no-confirm; cd ../",
-            "hugo -d /var/www/makedeb.org"
+            "sudo hugo -d /var/www/makedeb.org"
         ]
     }]
 };
