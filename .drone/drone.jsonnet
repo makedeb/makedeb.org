@@ -13,7 +13,7 @@ local buildAndPublish() = {
         volumes: [{name: "deploy-dir", path: "/var/www/makedeb.org"}],
         commands: [
             "sudo apt-get update",
-            "sudo apt-get install git -y",
+            "sudo apt-get install git gcc -y",
             "sudo chown 'makedeb:makedeb' ./ -R",
             "git clone \"https://$${mpr_url}/go-bin\"",
             "git clone \"https://$${mpr_url}/hugo\"",
