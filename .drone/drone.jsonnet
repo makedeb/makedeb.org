@@ -9,11 +9,15 @@ local buildAndPublish() = {
     },
     steps: [{
         name: "build-and-publish",
-        image: "ubuntu:20.04",
+        image: "proget.hunterwittenborn.com/docker/makedeb/makedeb:ubuntu-focal",
         volumes: [{name: "deploy-dir", path: "/var/www/makedeb.org"}],
         commands: [
             "apt-get update",
-            "apt-get install hugo -y",
+            "apt-get install git -y",
+            "git clone \"https://${mpr_url}/go-bin\"",
+            "git clone \"https://${mpr_url}/hugo\"",
+            "cd go-bin/; makedeb -si; cd ../",
+            "cd hugo/; makedeb -di; cd ../",
             "hugo -d /var/www/makedeb.org"
         ]
     }]
