@@ -1,1 +1,3 @@
+# Hugo stuff.
 /resources/_gen/
+.hugo_build.lock

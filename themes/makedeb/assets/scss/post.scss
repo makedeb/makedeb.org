@@ -33,13 +33,13 @@
 		h2 {
 			font-weight: bold;
 			font-size: 2em;
-			padding: 0.7em 0 0.3em;
+			margin: 0.7em 0 0.3em;
 		}
 
 		h3 {
 			font-weight: bold;
 			font-size: 1.6em;
-			padding: 0.7em 0 0.4em;
+			margin: 0.7em 0 0.4em;
 		}
 
 		p, li {
@@ -57,6 +57,29 @@
 
 		li {
 			padding-left: 2em;
+		}
+
+		.heading {
+			.link-icon {
+				color: darken($light-grey, 20%);
+				transition-property: color;
+				visibility: hidden;
+				
+				svg {
+					height: 0.7em;
+					width: auto;
+				}
+			}
+
+			&:hover {
+				.link-icon {
+					visibility: visible;
+
+					&:hover {
+						color: $orange;
+					}
+				}
+			}
 		}
 	}
 	
