@@ -17,9 +17,9 @@
 				<p class="date">{{ .Date | time.Format "Monday, Jan 2, 2006" }}</p>
 				<a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
 				<a class="read-more" href="{{ .RelPermalink }}">Read more...</a>
-			{{ end }}
-			{{ end }}
 			</div>
+			{{ end }}
+			{{ end }}
 		</div>
 		{{- partial "footer.html" . -}}
 	</body>
