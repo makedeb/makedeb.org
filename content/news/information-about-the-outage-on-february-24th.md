@@ -3,7 +3,6 @@ title: "Information About the Outage on February 24th"
 date: 2022-02-24T15:59:30-06:00
 author: ["Hunter Wittenborn", "hwittenborn.png"]
 keywords: ["MPR"]
-draft: true
 ---
 
 On February 24, 2022, the [makedeb Package Repository](https://mpr.{{< makedeb_url >}}) experienced an outage that brought the platform offline for about 12 hours. The backend server that was serving the MPR interface experienced some storage issues, and due to some factors on my part the issue wasn't able to be fixed until around 4:00 PM CDT.
