@@ -1,7 +1,7 @@
 ---
 title: "Information About the Outage on February 24th"
 date: 2022-02-24T15:59:30-06:00
-author: ["Hunter Wittenborn", "hwittenborn.png"]
+authors: ["Hunter Wittenborn"]
 keywords: ["MPR"]
 ---
 

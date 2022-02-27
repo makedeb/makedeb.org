@@ -12,11 +12,14 @@
 				{{ .Content }}
 			</div>
 			<hr class="closing-hr">
-
-			<div class="author">
-				<img src="/media/profile-pictures/{{ index .Params.author 1 }}">
-				<p class="author-name">{{ index .Params.author 0 }}</p>
-				<p>
+			
+			<div class="authors">
+				{{ range .Params.authors }}
+				<div class="author">
+					<img src="/media/profile-pictures/{{ . }}">
+					<p class="author-name">{{ . }}</p>
+				</div>
+				{{ end }}
 			</div>
 
 		</div>

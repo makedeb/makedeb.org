@@ -1,7 +1,7 @@
 ---
 title: "Introducing the New makedeb Homepage"
 date: 2022-02-14T19:02:25-06:00
-author: ["Hunter Wittenborn", "hwittenborn.png"]
+authors: ["Hunter Wittenborn"]
 keywords: ["makedeb"]
 draft: false
 ---
