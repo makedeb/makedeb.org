@@ -21,7 +21,7 @@ The dropping of Arch Linux support has been something that's been on my mind for
 
 The current transition path for users who do use makedeb on Arch Linux is to use makedeb's [official Docker images](https://docs.makedeb.org/home/installing/docker/). These provide access to makedeb via use of Docker, and also provide native support for building via a Debian or Ubuntu based environment, which also makes for better compatibility in the built packages (e.g. with shared libaries).
 
-Note that the `:archlinux-latest` image variant will be removed after this transition is complete.
+Note that the `:archlinux-latest` image variant will also be removed after this transition is complete.
 
 ## Feedback
 
