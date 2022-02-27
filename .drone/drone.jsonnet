@@ -15,9 +15,9 @@ local buildAndPublish() = {
             "sudo apt-get update",
             "sudo apt-get install git gcc g++ -y",
             "sudo chown 'makedeb:makedeb' ./ -R",
-            "git clone \"https://$${mpr_url}/go-bin\"",
+            "git clone \"https://$${mpr_url}/golang-go\"",
             "git clone \"https://$${mpr_url}/hugo\"",
-            "cd go-bin/; makedeb -si --no-confirm; cd ../",
+            "cd golang-go/; makedeb -si --no-confirm; cd ../",
             "cd hugo/; makedeb -di --no-confirm; cd ../",
             "sudo hugo -d /var/www/makedeb.org"
         ]
