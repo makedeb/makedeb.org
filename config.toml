@@ -2,6 +2,7 @@ baseURL = "https://www.makedeb.org/"
 languageCode = "en-us"
 title = "makedeb"
 theme = "makedeb"
+enableGitInfo = true
 
 [params]
 	site_desc = "A simplicity-focused packaging tool for Debian archives"
