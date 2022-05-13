@@ -10,7 +10,7 @@ $phone-width: 550px;
 		padding: 5em 10% 2.5em;
 	}
 
-	.big-text, .normal-text, .install-button {
+	.big-text, .normal-text, {
 		width: 100%;
 		padding-bottom: 1.25rem;
 		text-align: center;
@@ -31,19 +31,34 @@ $phone-width: 550px;
 		padding-bottom: 2em;
 		line-height: 1.3em;
 	}
-	
-	.install-button a button {
-		border-style: none;
-		width: 8em;
-		height: 3em;
-		font-size: 1.15em;
-		border-radius: 0.125em;
-		transition-property: background-color;
-		transition-duration: 0.2s;
-	}
 
-	.install-button a button:hover {
-		cursor: pointer;
+	.install {
+		max-width: 40em;
+		margin: auto;
+
+		h2 {
+			font-size: 1.5em;
+			padding-bottom: 0.3em;
+			text-align: center;
+		}
+
+		.install-manually {
+			text-align: right;
+			padding-top: 0.3em;
+			font-size: 0.8em;
+		}
+
+		pre {
+			margin: 0;
+		}
+
+		code {
+			font-size: 1.35em;
+		}
+
+		.clipboard-icon, .check-icon {
+			height: 2em;
+		}
 	}
 }
 

@@ -7,7 +7,17 @@
 			<div class="homepage-fill">
 				<p class="big-text">{{ .Site.Params.site_desc }}</p>
 				<p class="normal-text">makedeb takes everything developers love about targeting Debian/Ubuntu based distributions, and makes the packaging easier, more enjoyable, and more maintainable.</p>
-				<div class="install-button"><a href="https://docs.{{ .Site.Params.makedeb_url }}/installing"><button>Install</button></a></div>
+				<div class="install">
+					<h2>Install</h2>
+					<div class="code-block">
+        					<div class="clipboard-icons">
+                					{{- partial "partials/svg/clipboard.svg" . -}}
+                					{{- partial "partials/svg/check.svg" . -}}
+        					</div>
+						<pre><code class="language-bash">bash -c &quot;$(wget -qO - 'https://shlink.makedeb.org/install')&quot;</code></pre>
+					</div>
+					<a class="install-manually" href="https://docs.{{ .Site.Params.makedeb_url }}/installing"><p class="install-manually">Or install manually...</p></a>
+				</div>
 			</div>
 			<div class="facts">
 				<div class="example-section">
