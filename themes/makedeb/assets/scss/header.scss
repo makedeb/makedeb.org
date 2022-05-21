@@ -32,6 +32,7 @@ header {
 	}
 
 	.makedeb-logo-text, .makedeb-logo-text:visited {
+		padding: 0;
 		font-size: 1.75em;
 		text-decoration: none;
 		color: $black;
@@ -44,11 +45,14 @@ header {
 		display: flex;
 		flex-direction: row;
 		padding-right: 0.75em;
+		flex-wrap: wrap;
 
 		p, a {
 			font-size: 1.15em;
-			margin: 0 0.75em 0em;
+			margin: 0.3em 0.75em;
 			display: inline;
+			padding: 0;
+			line-height: 1em;
 		}
 		
 		p {

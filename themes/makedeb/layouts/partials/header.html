@@ -19,6 +19,12 @@
 		{{ else }}
 		<a href="/news">News</a>
 		{{ end }}
+
+		{{ if eq .RelPermalink "/donate/" }}
+		<p>Donate</p>
+		{{ else }}
+		<a href="/donate">Donate</a>
+		{{ end }}
 	</div>
 </header>
 <hr class="header-hr">
