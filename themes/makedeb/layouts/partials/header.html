@@ -1,5 +1,9 @@
 <header>
+	{{ if hasPrefix .RelPermalink "/news" }}
+	<a class="makedeb-brand" href="/news">
+	{{ else }}
 	<a class="makedeb-brand" href="/">
+	{{ end }}
 		<img class="makedeb-logo" src="/media/makedeb-logo.png" alt="makedeb logo">
 		<p class="makedeb-logo-text">makedeb</p>
 	</a>
