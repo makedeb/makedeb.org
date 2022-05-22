@@ -1,10 +1,12 @@
 <head>
 	{{ if .Page.IsHome }}
 	<title>{{ .Site.Title }} - {{ .Site.Params.site_desc }}</title>
-	<meta name="description" content="{{ .Site.Params.site_desc }}.">
+	{{ else if .Scratch.Get "title" }}
+	<title>{{ .Scratch.Get "title" }} | {{ .Site.Title }}</title>
 	{{ else }}
 	<title>{{ .Page.Title }} | {{ .Site.Title }}</title>
 	{{ end }}
+	<meta name="description" content="{{ .Site.Params.site_desc }}.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	{{ $style := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 	<link rel="icon" type="image/x-icon" href="/media/makedeb-logo.png">
