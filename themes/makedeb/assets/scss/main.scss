@@ -72,21 +72,10 @@ li::before {
 // Styling for code blocks.
 code {
 	background-color: lighten($light-grey, 5%);
-	padding: 0.2em;
-	font-size: 85%;
-	border-radius: 0.3em;
-	font-family: "Ubuntu Mono", monospace;
-}
-
-pre {
-	margin: 0.5em 0;
-	padding: 0.3em 0.5em;
-	background-color: lighten($light-grey, 5%);
-	overflow: auto;
-
-	code {
-		line-height: 1.6em;
-	}
+        padding: 0.2em;
+        font-size: 85%;
+        border-radius: 0.3em;
+        font-family: "Ubuntu Mono", monospace;
 }
 
 .code-block {    
@@ -103,35 +92,48 @@ pre {
                 z-index: 2;
         }
 
-	.clipboard-icons {
-		visibility: hidden;
-		opacity: 0;
-		transition-property: visibility opacity;
-		transition-duration: 0.2s;
-	}
+        .clipboard-icons {
+                visibility: hidden;
+                opacity: 0;
+                transition-property: visibility opacity;
+                transition-duration: 0.2s;
+        }
 
-	&:hover {
-		.clipboard-icons {
-			visibility: visible;
-			opacity: 1;
-		}
-	}
+        &:hover {
+                .clipboard-icons {
+                        visibility: visible;
+                        opacity: 1;
+                }
+        }
     
         .clipboard-icon {
                 color: darken($light-grey, 28%);
-		background-color: lighten($light-grey, 5%);
-        
+                background-color: lighten($light-grey, 5%);
+ 
                 &:hover {
                         color: $orange;
                         cursor: pointer;
                 }
         }
-        
+    
         .check-icon {
                 display: none;
                 color: #40a85c;
-		background-color: lighten($light-grey, 5%);
+                background-color: lighten($light-grey, 5%);
         }
+
+	pre {
+        	margin: 0.5em 0;
+        	padding: 0.3em 0.5em;
+        	background-color: lighten($light-grey, 5%);
+        	overflow: auto;
+
+        	code {
+                	line-height: 1.6em;
+                	font-size: 100%;
+			padding: 0.2em 0;
+        	}
+	}
 }
 
 // Ensures the footer is (at minimum) at the bottom of the viewport.
