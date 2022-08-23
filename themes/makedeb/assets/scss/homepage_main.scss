@@ -115,3 +115,31 @@ $phone-width: 550px;
 		}
 	}
 }
+
+.supporters {
+	padding: 1em 2rem 3em;
+	text-align: center;
+	background-color: $silver;
+
+	h2 {
+		font-size: 2.5em;
+	}
+
+	p {
+		font-size: 1.4em;
+	}
+
+	.person {
+		padding: 1em 0;
+		p {
+			font-size: 1.3em;
+		}
+
+		img {
+			height: 6em;
+			width: auto;
+			border-radius: 50%;
+			border: 0.2em solid darken($silver, 15%);
+		}
+	}
+}
