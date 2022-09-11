@@ -34,3 +34,5 @@ The MPR also collects some information indirectly from you:
 This information is collected in order to enhance the service quality of the MPR. Currently, this information is collected in order to report errors that occur in the service, and is collected via [Sentry](https://sentry.io).
 
 All information is stored on a Sentry instance in control via makedeb's team on a Hetzner server instance, and is not stored on the publicly available Sentry cloud instance.
+
+Sentry telemetry collection can be control for the web and HTTP Git interfaces by setting the `DNT` header in the requests your browser makes. This can be enabled in your browser by enabling the "Do Not Track" feature (see the support articles for [Google Chrome](https://support.google.com/chrome/answer/2790761) and [Firefox](https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature)). Note that Sentry telemetry collection can not currently be disabled in the SSH Git interface.

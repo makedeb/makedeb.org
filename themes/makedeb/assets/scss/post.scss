@@ -51,29 +51,6 @@
 		li {
 			padding-left: 2em;
 		}
-
-		.heading {
-			.link-icon {
-				color: darken($light-grey, 20%);
-				transition-property: color;
-				visibility: hidden;
-				
-				svg {
-					height: 0.7em;
-					width: auto;
-				}
-			}
-
-			&:hover {
-				.link-icon {
-					visibility: visible;
-
-					&:hover {
-						color: $orange;
-					}
-				}
-			}
-		}
 	}
 	
 	.closing-hr {

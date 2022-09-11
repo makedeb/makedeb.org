@@ -33,14 +33,14 @@ a:hover {
 p, ul {
         padding: 0.3em 0;
 }
-
+ul {
+        list-style-type: circle;
+        margin-left: 2em;
+}
+      
 p, li {
 	font-size: 1.1em;
 	line-height: 1.3em;
-}
-
-li::before {
-	content: "- ";
 }
 
 h1, h2 {
@@ -155,4 +155,27 @@ footer {
 // This should be used right below the navbar header.
 .main {
 	margin: 2em;
+}
+
+.heading {
+        .link-icon {
+                color: darken($light-grey, 20%);
+                transition: opacity 0.2s linear, color 0.2s linear;
+                opacity: 0;
+                
+                svg {
+                        height: 0.7em;
+                        width: auto;
+                }
+        }
+
+        &:hover {
+                .link-icon {
+                        opacity: 1;
+
+                        &:hover {
+                                color: $orange;
+                        }
+                }
+        }
 }
