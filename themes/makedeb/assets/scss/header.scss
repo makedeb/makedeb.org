@@ -1,6 +1,6 @@
 @import "variables";
 
-$header-max-width: 550px;
+$header-max-width: 640px;
 
 header {
 	height: 100%;
@@ -45,6 +45,7 @@ header {
 		flex-direction: row;
 		padding-right: 0.75em;
 		flex-wrap: wrap;
+		width: max-content;
 
 		p, a {
 			font-size: 1.15em;
