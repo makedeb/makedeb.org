@@ -2,27 +2,33 @@
 <html>
 	{{- partial "head.html" . -}}
 	<body>
-        	{{- partial "header.html" . -}}
-		<div class="post">
-			<h1 class="title">{{ .Title }}</h1><br>
-			<p class="date">Published {{ .Date | time.Format "Monday, Jan 2, 2006" }}</p>
-			<hr>
+        {{- partial "header.html" . -}}
 
-			<div class="content">
+		{{ if (hasPrefix .Page.RelPermalink "/news/") }}
+			<div class="post">
+				<h1 class="title">{{ .Title }}</h1><br>
+				<p class="date">Published {{ .Date | time.Format "Monday, Jan 2, 2006" }}</p>
+				<hr>
+
+				<div class="content">
+					{{ .Content }}
+				</div>
+				<hr class="closing-hr">
+				
+				<div class="authors">
+					{{ range .Params.authors }}
+					<div class="author">
+						<img src="/media/profile-pictures/{{ . }}">
+						<p class="author-name">{{ . }}</p>
+					</div>
+					{{ end }}
+				</div>
+			</div>
+		{{ else }}
+			<div class="generic-page">
 				{{ .Content }}
 			</div>
-			<hr class="closing-hr">
-			
-			<div class="authors">
-				{{ range .Params.authors }}
-				<div class="author">
-					<img src="/media/profile-pictures/{{ . }}">
-					<p class="author-name">{{ . }}</p>
-				</div>
-				{{ end }}
-			</div>
-
-		</div>
-        	{{- partial "footer.html" . -}}
+		{{ end }}
+        {{- partial "footer.html" . -}}
 	</body>
 </html>

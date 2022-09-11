@@ -5,6 +5,7 @@
 @import "homepage_main";
 @import "404";
 @import "post";
+@import "generic-page";
 @import "content-section";
 
 // External CSS.
@@ -29,10 +30,17 @@ a:hover {
 	color: lighten($orange, 8%);
 }
 
-p {
+p, ul {
+        padding: 0.3em 0;
+}
+
+p, li {
 	font-size: 1.1em;
 	line-height: 1.3em;
-	padding-top: 0.5em;
+}
+
+li::before {
+	content: "- ";
 }
 
 h1, h2 {
@@ -63,10 +71,6 @@ em {
 
 strong {
 	font-weight: bold;
-}
-
-li::before {
-	content: "- ";
 }
 
 // Styling for code blocks.
