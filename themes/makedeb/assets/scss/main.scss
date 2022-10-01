@@ -16,6 +16,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 // Main CSS, shared across entire website.
+p, a, h1, h2, h3, h4, h5, h6, ul, li {
+        font-weight: lighter;
+}
+
 body {
 	font-family: "Ubuntu", sans-serif;
 }
@@ -70,13 +74,13 @@ em {
 }
 
 strong {
-	font-weight: bold;
+	font-weight: normal;
 }
 
 // Styling for code blocks.
 code {
 	background-color: lighten($light-grey, 5%);
-        padding: 0.2em;
+	padding: 0.1em 0.2em;
         font-size: 85%;
         border-radius: 0.3em;
         font-family: "Ubuntu Mono", monospace;
