@@ -1,8 +1,6 @@
 <head>
 	{{ if .Page.IsHome }}
 	<title>{{ .Site.Title }} - {{ .Site.Params.site_desc }}</title>
-	{{ else if .Scratch.Get "title" }}
-	<title>{{ .Scratch.Get "title" }} | {{ .Site.Title }}</title>
 	{{ else }}
 	<title>{{ .Page.Title }} | {{ .Site.Title }}</title>
 	{{ end }}

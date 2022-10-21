@@ -37,18 +37,23 @@ a:hover {
 p, ul {
         padding: 0.3em 0;
 }
+
 ul {
         list-style-type: circle;
         margin-left: 2em;
 }
       
-p, li, a {
+p, li {
 	font-size: 1.1em;
 	line-height: 1.3em;
 }
 
 h1, h2 {
-        margin-bottom: 0.3em;
+        padding-top: 0.5em;
+
+        &.no-padding-top {
+                padding-top: 0;
+        }
 }
 
 h1 {

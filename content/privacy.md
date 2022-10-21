@@ -1,5 +1,6 @@
-# Privacy Policy
-----------------
+---
+title: "Privacy Policy"
+---
 
 This document describes how the information that makedeb's services and applications obtained from your are collected and used.
 
