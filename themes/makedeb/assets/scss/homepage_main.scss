@@ -4,7 +4,7 @@ $phone-width: 550px;
 .homepage-fill {
 	background-color: $white;
 	height: 100%;
-	padding: 10em 20% 2.5em;
+	padding: 3em 5% 2.5em;
 
 	@media (max-width: $phone-width) {
 		padding: 5em 10% 2.5em;
@@ -15,10 +15,12 @@ $phone-width: 550px;
 		padding-bottom: 1.25rem;
 		text-align: center;
 		line-height: 1.1em;
+		margin: 0 auto;
 	}
 
 	.big-text {
 		font-size: 3em;
+		max-width: 20em;
 
 		@media (max-width: 720px) {
 			font-size: 2.5em;
@@ -30,6 +32,7 @@ $phone-width: 550px;
 		color: $inactive-link;
 		padding-bottom: 2em;
 		line-height: 1.3em;
+		max-width: 32em;
 	}
 
 	.install {
