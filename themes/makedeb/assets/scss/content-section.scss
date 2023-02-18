@@ -31,6 +31,7 @@
 		border: solid;
 		border-color: darken($silver, 10%);
 		border-width: 0.15em;
+		@extend .themeBackgroundColor;
 		background-color: $silver;
 		border-radius: 0.2em;
 		padding: 1em 0.5em;
@@ -51,6 +52,7 @@
 		
 		.title, .read-more {
 			color: $dark-grey;
+			@extend .themeBackgroundColor;
 			transition: color 0.2s;
 			width: fit-content;
 		}

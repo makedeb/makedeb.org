@@ -4,6 +4,7 @@ $header-max-width: 640px;
 
 header {
 	height: 100%;
+	@extend .themeHeaderColor;
 	background-color: $header-bg-color;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -35,6 +36,7 @@ header {
 		padding: 0;
 		font-size: 1.75em;
 		text-decoration: none;
+		@extend .themeTextColor;
 		color: $black;
 	}
 
@@ -57,6 +59,7 @@ header {
 		}
 		
 		p {
+			@extend .themeTextColor;
 			color: $black;
 			cursor: default;
 		}
@@ -77,12 +80,27 @@ header {
 			justify-content: center;
 		}
 	}
+
+	// Dark mode button
+	.toggle-btn{
+		border: 1px solid;
+		border-color: #141414;
+		border-radius: 0.3rem;
+		cursor: pointer;
+	}
+
+	.active{
+		background-color: #141414;
+		color: #fff;
+		border-color: #fff;
+	}
 }
 
 .header-hr {
 	width: 100%;
 	margin: 0;
 	border: 0;
+	@extend .themeHeaderHrColor;
 	color: $header-hg-color;
 	background-color: $header-hg-color;
 	height: 0.25em;

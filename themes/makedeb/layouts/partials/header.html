@@ -28,7 +28,40 @@
 		<p>Donate</p>
 		{{ else }}
 		<a href="/donate">Donate</a>
+		<button class="toggle-btn" id="toggle-theme-button">Dark Mode</button>
 		{{ end }}
 	</div>
 </header>
 <hr class="header-hr">
+
+<script>
+	const toggleThemeBtn = document.getElementById("toggle-theme-button")
+	toggleThemeBtn?.addEventListener("click",function(){
+		const body = document.body
+		if (body.className=="dark")
+		{
+			setBodyClass("")
+			toggleThemeBtn.classList.remove("active")
+			toggleThemeBtn.innerText = "Dark Mode"
+			localStorage.removeItem("theme")
+		}
+		else {
+			toggleThemeBtn.classList.add("active")
+			toggleThemeBtn.innerText = "Light Mode"
+			localStorage.setItem("theme", "dark")
+			setBodyClass("dark")
+		}
+	})
+
+	const theme = localStorage.getItem("theme")
+	if (theme == "dark"){
+		setBodyClass("dark")
+		toggleThemeBtn.classList.add("active")
+		toggleThemeBtn.innerText = "Light Mode"
+	}
+
+	function setBodyClass(className){
+		const body = document.body
+		body.className = className
+	}
+</script>
