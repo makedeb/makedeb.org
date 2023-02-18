@@ -28,40 +28,72 @@
 		<p>Donate</p>
 		{{ else }}
 		<a href="/donate">Donate</a>
-		<button class="toggle-btn" id="toggle-theme-button">Dark Mode</button>
+		<button class="toggle-btn" id="toggle-theme-button">
+			<img id="sun-icon" class="icon" src="/media/theme-button/sun_icon.svg"/>
+			<img id="moon-icon" class="icon" src="/media/theme-button/moon_icon.svg"/>
+		</button>
 		{{ end }}
 	</div>
 </header>
 <hr class="header-hr">
 
 <script>
+	initialThemeLoad()
+
 	const toggleThemeBtn = document.getElementById("toggle-theme-button")
 	toggleThemeBtn?.addEventListener("click",function(){
 		const body = document.body
 		if (body.className=="dark")
 		{
 			setBodyClass("")
-			toggleThemeBtn.classList.remove("active")
-			toggleThemeBtn.innerText = "Dark Mode"
+			toggleThemeBtn?.classList.remove("active")
+			changeBtnIcon("moon")
 			localStorage.removeItem("theme")
 		}
 		else {
-			toggleThemeBtn.classList.add("active")
-			toggleThemeBtn.innerText = "Light Mode"
+			toggleThemeBtn?.classList.add("active")
+			changeBtnIcon("sun")
 			localStorage.setItem("theme", "dark")
 			setBodyClass("dark")
 		}
 	})
 
+	/**
+	 * Makes nessesary changes for initial theme load
+	*/
+	function initialThemeLoad(){
+	const toggleThemeBtn = document.getElementById("toggle-theme-button")
 	const theme = localStorage.getItem("theme")
-	if (theme == "dark"){
-		setBodyClass("dark")
-		toggleThemeBtn.classList.add("active")
-		toggleThemeBtn.innerText = "Light Mode"
+		if (theme == "dark") {
+			setBodyClass("dark")
+			changeBtnIcon("sun")
+			toggleThemeBtn?.classList.add("active")
+		} else changeBtnIcon("moon")
 	}
 
+	/**
+	 * Changes the body class
+	 * @param {string} className - class name to be set
+	*/
 	function setBodyClass(className){
 		const body = document.body
 		body.className = className
+	}
+
+	/**
+	 * Changes theme toggle button's icon
+	 * @param {"sun" | "moon"} iconType - icon type to be displayed
+	*/
+	function changeBtnIcon(iconType){
+		const sunIcon = document.getElementById("sun-icon")
+		const moonIcon = document.getElementById("moon-icon")
+		if (iconType == "sun"){
+			moonIcon?.classList.remove("active-icon")
+			sunIcon?.classList.add("active-icon")
+		}
+		if (iconType == "moon"){
+			sunIcon?.classList.remove("active-icon")
+			moonIcon?.classList.add("active-icon")
+		}
 	}
 </script>

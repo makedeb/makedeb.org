@@ -81,12 +81,22 @@ header {
 		}
 	}
 
-	// Dark mode button
+	// Toggle theme button
 	.toggle-btn{
 		border: 1px solid;
 		border-color: #141414;
 		border-radius: 0.3rem;
 		cursor: pointer;
+		border: 1px solid;
+		
+		.icon{
+			display: none;
+			width: 1rem;
+		}
+
+		.active-icon{
+			display: block;
+		}
 	}
 
 	.active{
