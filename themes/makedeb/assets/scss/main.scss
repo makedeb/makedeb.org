@@ -126,9 +126,10 @@ code {
         }
     
         .clipboard-icon {
+                @extend .themeCodeColor;
                 color: darken($light-grey, 28%);
                 background-color: lighten($light-grey, 5%);
- 
+
                 &:hover {
                         color: $orange;
                         cursor: pointer;
@@ -138,6 +139,7 @@ code {
         .check-icon {
                 display: none;
                 color: #40a85c;
+                @extend .themeClipboardCheckedColor;
                 background-color: lighten($light-grey, 5%);
         }
 

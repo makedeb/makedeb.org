@@ -24,6 +24,7 @@ $header-hg-color: #e6e5e3;
 .dark .themeBackgroundColor {
     color: #fff;
     background-color: #2D2D2D;
+    border-color: #464646;
 }
 .dark .themeFactsColor {
     color: #fff;
@@ -31,5 +32,9 @@ $header-hg-color: #e6e5e3;
 }
 .dark .themeCodeColor {
     color: #fff;
+    background-color: #202020;
+}
+.dark .themeClipboardCheckedColor {
+    color: #40a85c;
     background-color: #202020;
 }
