@@ -86,9 +86,15 @@ header {
 		cursor: pointer;
 		border: none;		
 
-		.icon{
+		.theme-icon{
+			transition-property: fill;
+			transition-duration: 0.2s;
 			display: none;
-			width: 1rem;
+			width: 1.2rem;
+			fill: $inactive-link;
+			&:hover{
+				fill: $orange;
+			}
 		}
 
 		.active-icon{

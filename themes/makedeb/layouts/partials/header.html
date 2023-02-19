@@ -29,8 +29,8 @@
 		{{ else }}
 		<a href="/donate">Donate</a>
 		<button class="toggle-btn" id="toggle-theme-button">
-			<img id="sun-icon" class="icon" src="/media/theme-button/sun_icon.svg"/>
-			<img id="moon-icon" class="icon" src="/media/theme-button/moon_icon.svg"/>
+			{{- partial "partials/svg/sun.svg" . -}}
+			{{- partial "partials/svg/moon.svg" . -}}
 		</button>
 		{{ end }}
 	</div>
