@@ -80,33 +80,6 @@ header {
 			justify-content: center;
 		}
 	}
-
-	// Toggle theme button
-	.toggle-btn{
-		cursor: pointer;
-		border: none;		
-
-		.theme-icon{
-			transition-property: fill;
-			transition-duration: 0.2s;
-			display: none;
-			width: 1.2rem;
-			fill: $inactive-link;
-			&:hover{
-				fill: $orange;
-			}
-		}
-
-		.active-icon{
-			display: block;
-		}
-	}
-
-	.active{
-		background-color: #1e1e1e;
-		color: #fff;
-		border-color: #fff;
-	}
 }
 
 .header-hr {

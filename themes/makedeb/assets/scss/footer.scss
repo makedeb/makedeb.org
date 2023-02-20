@@ -37,6 +37,36 @@ footer {
 		}
 	}
 	
+	// Toggle theme button
+	.toggle-btn{
+		cursor: pointer;
+		border: none;		
+		background-color: rgba(#000,0);
+		display: flex;
+		justify-content: center;
+
+		@media (max-width: $footer-max-width) {
+			order: -1;
+			margin-bottom: 0.25rem;
+		}
+
+		.theme-icon{
+			transition-property: fill;
+			transition-duration: 0.2s;
+			display: none;
+			width: 1.2rem;
+			fill: $inactive-link;
+			
+			&:hover{
+				fill: $orange;
+			}
+		}
+
+		.active-icon{
+			display: block;
+		}
+	}
+	
 	.copyright {
 		@media (min-width: $footer-max-width) {
 			margin-left: 0.7em;
