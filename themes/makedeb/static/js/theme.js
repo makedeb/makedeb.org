@@ -1,15 +1,15 @@
 initialThemeLoad();
 
 const toggleThemeBtn = document.getElementById("toggle-theme-button");
-toggleThemeBtn?.addEventListener("click", function () {
+toggleThemeBtn.addEventListener("click", function () {
   const body = document.body;
   if (body.className == "dark") {
     document.body.className = ""
-    toggleThemeBtn?.classList.remove("active");
+    toggleThemeBtn.classList.remove("active");
     changeBtnIcon("moon");
     localStorage.removeItem("theme");
   } else {
-    toggleThemeBtn?.classList.add("active");
+    toggleThemeBtn.classList.add("active");
     changeBtnIcon("sun");
     localStorage.setItem("theme", "dark");
     document.body.className = "dark"
@@ -25,7 +25,7 @@ function initialThemeLoad() {
   if (theme == "dark") {
     document.body.className = "dark"
     changeBtnIcon("sun");
-    toggleThemeBtn?.classList.add("active");
+    toggleThemeBtn.classList.add("active");
   } else changeBtnIcon("moon");
 }
 
@@ -37,11 +37,11 @@ function changeBtnIcon(iconType) {
   const sunIcon = document.getElementById("sun-icon");
   const moonIcon = document.getElementById("moon-icon");
   if (iconType == "sun") {
-    moonIcon?.classList.remove("active-icon");
-    sunIcon?.classList.add("active-icon");
+    moonIcon.classList.remove("active-icon");
+    sunIcon.classList.add("active-icon");
   }
   if (iconType == "moon") {
-    sunIcon?.classList.remove("active-icon");
-    moonIcon?.classList.add("active-icon");
+    sunIcon.classList.remove("active-icon");
+    moonIcon.classList.add("active-icon");
   }
 }
