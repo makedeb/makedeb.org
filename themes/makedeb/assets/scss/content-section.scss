@@ -31,7 +31,7 @@
 		border: solid;
 		border-color: darken($silver, 10%);
 		border-width: 0.15em;
-		@extend .themeBackgroundColor;
+		@extend .themeCardsColor;
 		background-color: $silver;
 		border-radius: 0.2em;
 		padding: 1em 0.5em;
@@ -42,7 +42,7 @@
 		.date {
 			font-size: 0.9em;
 			padding-bottom: 0.5em;
-			@extend .postContentDateColor;
+			@extend .themePostContentDateColor;
 			color: lighten($dark-grey, 40%);
 		}
 
@@ -53,7 +53,7 @@
 		
 		.title, .read-more {
 			color: $dark-grey;
-			@extend .themeBackgroundColor;
+			@extend .themeCardsColor;
 			transition: color 0.2s;
 			width: fit-content;
 		}
