@@ -5,7 +5,7 @@ initialThemeLoad()
 		const body = document.body
 		if (body.className=="dark")
 		{
-			setBodyClass("")
+			document.body.className = ""
 			toggleThemeBtn?.classList.remove("active")
 			changeBtnIcon("moon")
 			localStorage.removeItem("theme")
@@ -14,7 +14,7 @@ initialThemeLoad()
 			toggleThemeBtn?.classList.add("active")
 			changeBtnIcon("sun")
 			localStorage.setItem("theme", "dark")
-			setBodyClass("dark")
+			document.body.className = "dark"
 		}
 	})
 
@@ -25,19 +25,10 @@ initialThemeLoad()
 	const toggleThemeBtn = document.getElementById("toggle-theme-button")
 	const theme = localStorage.getItem("theme")
 		if (theme == "dark") {
-			setBodyClass("dark")
+			document.body.className = "dark"
 			changeBtnIcon("sun")
 			toggleThemeBtn?.classList.add("active")
 		} else changeBtnIcon("moon")
-	}
-
-	/**
-	 * Changes the body class
-	 * @param {string} className - class name to be set
-	*/
-	function setBodyClass(className){
-		const body = document.body
-		body.className = className
 	}
 
 	/**
