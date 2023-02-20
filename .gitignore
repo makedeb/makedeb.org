@@ -1,3 +1,6 @@
 # Hugo stuff.
 /resources/_gen/
 .hugo_build.lock
+
+# NodeJS
+node_modules/
