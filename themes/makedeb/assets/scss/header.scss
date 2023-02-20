@@ -3,76 +3,78 @@
 $header-max-width: 640px;
 
 header {
-	height: 100%;
-	@extend .themeHeaderColor;
-	background-color: $header-bg-color;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+  height: 100%;
+  @extend .themeHeaderColor;
+  background-color: $header-bg-color;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-	@media (max-width: $header-max-width) {
-		grid-template-columns: 1fr;
+  @media (max-width: $header-max-width) {
+    grid-template-columns: 1fr;
 
-		.makedeb-brand {
-			justify-content: center;
-		}
-	}
+    .makedeb-brand {
+      justify-content: center;
+    }
+  }
 
-	// Logo and "makedeb" text.
-	.makedeb-brand {
-		width: fit-content;
-		height: 100%;
-		display: flex;
-		align-self: center;
-		align-items: center;
-	}
+  // Logo and "makedeb" text.
+  .makedeb-brand {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+  }
 
-	.makedeb-logo {
-		height: 2.9em;
-		width: 2.9em;
-		padding: 0.55em;
-	}
+  .makedeb-logo {
+    height: 2.9em;
+    width: 2.9em;
+    padding: 0.55em;
+  }
 
-	.makedeb-logo-text, .makedeb-logo-text:visited {
-		padding: 0;
-		font-size: 1.75em;
-		text-decoration: none;
-		@extend .themeTextColor;
-		color: $black;
-	}
+  .makedeb-logo-text,
+  .makedeb-logo-text:visited {
+    padding: 0;
+    font-size: 1.75em;
+    text-decoration: none;
+    @extend .themeTextColor;
+    color: $black;
+  }
 
-	// Links.
-	.links {
-		justify-self: end;
-		align-self: center;
-		display: flex;
-		flex-direction: row;
-		padding-right: 0.75em;
-		flex-wrap: wrap;
-		width: max-content;
+  // Links.
+  .links {
+    justify-self: end;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    padding-right: 0.75em;
+    flex-wrap: wrap;
+    width: max-content;
 
-		p, a {
-			font-size: 1.15em;
-			margin: 0.3em 0.75em;
-			display: inline;
-			padding: 0;
-			line-height: 1em;
-		}
-		
-		p {
-			@extend .themeTextColor;
-			color: $black;
-			cursor: default;
-		}
+    p,
+    a {
+      font-size: 1.15em;
+      margin: 0.3em 0.75em;
+      display: inline;
+      padding: 0;
+      line-height: 1em;
+    }
 
-		a {
-			color: $inactive-link;
-			transition-property: color;
-			transition-duration: 0.2s;
-		}
+    p {
+      @extend .themeTextColor;
+      color: $black;
+      cursor: default;
+    }
 
-		a:hover {
-			color: $orange;
-		}
+    a {
+      color: $inactive-link;
+      transition-property: color;
+      transition-duration: 0.2s;
+    }
+
+    a:hover {
+      color: $orange;
+    }
 
 		@media (max-width: $header-max-width) {
 			width: 100%;
@@ -80,14 +82,26 @@ header {
 			justify-content: center;
 		}
 	}
-}
+    @media (max-width: $header-max-width) {
+      width: 100%;
+      padding: 0.4em 0 0.8em;
+      justify-content: center;
+    }
+  }
+
+  .active {
+    background-color: #141414;
+    color: #fff;
+    border-color: #fff;
+  }
+
 
 .header-hr {
-	width: 100%;
-	margin: 0;
-	border: 0;
-	@extend .themeHeaderHrColor;
-	color: $header-hg-color;
-	background-color: $header-hg-color;
-	height: 0.25em;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  @extend .themeHeaderHrColor;
+  color: $header-hg-color;
+  background-color: $header-hg-color;
+  height: 0.25em;
 }
