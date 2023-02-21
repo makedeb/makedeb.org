@@ -103,7 +103,6 @@ strong {
 // Styling for code blocks.
 code {
   @extend .themeCodeColor;
-  background-color: lighten($light-grey, 5%);
   padding: 0.1em 0.2em;
   font-size: 85%;
   border-radius: 0.3em;
@@ -141,8 +140,6 @@ code {
 
   .clipboard-icon {
     @extend .themeCodeColor;
-    color: darken($light-grey, 28%);
-    background-color: lighten($light-grey, 5%);
 
     &:hover {
       color: $orange;
@@ -154,14 +151,12 @@ code {
     display: none;
     color: #40a85c;
     @extend .themeClipboardCheckedColor;
-    background-color: lighten($light-grey, 5%);
   }
 
   pre {
     margin: 0.5em 0;
     padding: 0.3em 0.5em;
     @extend .themeCodeColor;
-    background-color: lighten($light-grey, 5%);
     overflow: auto;
 
     code {

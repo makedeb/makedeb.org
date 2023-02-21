@@ -4,15 +4,15 @@ const toggleThemeBtn = document.getElementById("toggle-theme-button");
 toggleThemeBtn.addEventListener("click", function () {
   const body = document.body;
   if (body.className == "dark") {
-    document.body.className = ""
+    document.body.className = "light"
     toggleThemeBtn.classList.remove("active");
     changeBtnIcon("moon");
     localStorage.removeItem("theme");
   } else {
     toggleThemeBtn.classList.add("active");
+    document.body.className = "dark"
     changeBtnIcon("sun");
     localStorage.setItem("theme", "dark");
-    document.body.className = "dark"
   }
 });
 
@@ -26,7 +26,9 @@ function initialThemeLoad() {
     document.body.className = "dark"
     changeBtnIcon("sun");
     toggleThemeBtn.classList.add("active");
-  } else changeBtnIcon("moon");
+  } else {
+    changeBtnIcon("moon")
+  };
 }
 
 /**

@@ -5,7 +5,6 @@ $header-max-width: 640px;
 header {
   height: 100%;
   @extend .themeHeaderColor;
-  background-color: $header-bg-color;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
@@ -38,7 +37,6 @@ header {
     font-size: 1.75em;
     text-decoration: none;
     @extend .themeTextColor;
-    color: $black;
   }
 
   // Links.
@@ -62,7 +60,6 @@ header {
 
     p {
       @extend .themeTextColor;
-      color: $black;
       cursor: default;
     }
 
@@ -101,7 +98,5 @@ header {
   margin: 0;
   border: 0;
   @extend .themeHeaderHrColor;
-  color: $header-hg-color;
-  background-color: $header-hg-color;
   height: 0.25em;
 }
