@@ -18,9 +18,9 @@
     line-height: 1.6em;
   }
 
-	hr {
-		@extend .themePostHrColor;
-	}
+  hr {
+    @extend .themePostHrColor;
+  }
   hr {
     @extend .themePostHrColor;
   }
@@ -76,11 +76,10 @@
       margin: 1em 0;
     }
 
-		.author-name {
-			font-size: 1.5em;
-		}
-
-	}
+    .author-name {
+      font-size: 1.5em;
+    }
+  }
 
   .title,
   .date {

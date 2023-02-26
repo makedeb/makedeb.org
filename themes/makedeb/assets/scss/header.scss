@@ -73,25 +73,24 @@ header {
       color: $orange;
     }
 
-		@media (max-width: $header-max-width) {
-			width: 100%;
-			padding: 0.4em 0 0.8em;
-			justify-content: center;
-		}
-	}
     @media (max-width: $header-max-width) {
       width: 100%;
       padding: 0.4em 0 0.8em;
       justify-content: center;
     }
   }
-
-  .active {
-    background-color: #141414;
-    color: #fff;
-    border-color: #fff;
+  @media (max-width: $header-max-width) {
+    width: 100%;
+    padding: 0.4em 0 0.8em;
+    justify-content: center;
   }
+}
 
+.active {
+  background-color: #141414;
+  color: #fff;
+  border-color: #fff;
+}
 
 .header-hr {
   width: 100%;

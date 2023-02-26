@@ -35,46 +35,47 @@ footer {
       padding: 0 0.5em;
     }
 
-		.generation-info, .links {
-			padding-top: 0.5em;
-		}
-	}
-	
-	// Toggle theme button
-	.toggle-btn{
-		cursor: pointer;
-		border: none;		
-		background-color: rgba(#000,0);
-		display: flex;
-		justify-content: center;
+    .generation-info,
+    .links {
+      padding-top: 0.5em;
+    }
+  }
 
-		@media (max-width: $footer-max-width) {
-			order: -1;
-			margin-bottom: 0.25rem;
-		}
+  // Toggle theme button
+  .toggle-btn {
+    cursor: pointer;
+    border: none;
+    background-color: rgba(#000, 0);
+    display: flex;
+    justify-content: center;
 
-		.theme-icon{
-			transition-property: fill;
-			transition-duration: 0.2s;
-			display: none;
-			width: 1.2rem;
-			fill: $inactive-link;
-			
-			&:hover{
-				fill: $orange;
-			}
-		}
+    @media (max-width: $footer-max-width) {
+      order: -1;
+      margin-bottom: 0.25rem;
+    }
 
-		.active-icon{
-			display: block;
-		}
-	}
-	
-	.copyright {
-		@media (min-width: $footer-max-width) {
-			margin-left: 0.7em;
-		}
-	}
+    .theme-icon {
+      transition-property: fill;
+      transition-duration: 0.2s;
+      display: none;
+      width: 1.2rem;
+      fill: $inactive-link;
+
+      &:hover {
+        fill: $orange;
+      }
+    }
+
+    .active-icon {
+      display: block;
+    }
+  }
+
+  .copyright {
+    @media (min-width: $footer-max-width) {
+      margin-left: 0.7em;
+    }
+  }
 
   .copyright {
     @media (min-width: $footer-max-width) {
