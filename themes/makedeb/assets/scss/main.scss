@@ -33,6 +33,10 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+hr {
+  @extend .themePostHrColor;
+}
+
 .dark {
   color: #fff;
   background-color: #2d2d2d;
