@@ -6,12 +6,12 @@ toggleThemeBtn.addEventListener("click", function () {
   if (body.className == "dark") {
     document.body.className = "light";
     toggleThemeBtn.classList.remove("active");
-    changeBtnIcon("moon");
+    setImages("dark");
     localStorage.removeItem("theme");
   } else {
     toggleThemeBtn.classList.add("active");
     document.body.className = "dark";
-    changeBtnIcon("sun");
+    setImages("light");
     localStorage.setItem("theme", "dark");
   }
 });
@@ -24,26 +24,46 @@ function initialThemeLoad() {
   const theme = localStorage.getItem("theme");
   if (theme == "dark") {
     document.body.className = "dark";
-    changeBtnIcon("sun");
+    setImages("light");
     toggleThemeBtn.classList.add("active");
   } else {
-    changeBtnIcon("moon");
+    setImages("dark");
   }
 }
 
 /**
- * Changes theme toggle button's icon
- * @param {"sun" | "moon"} iconType - icon type to be displayed
+ * Set the images on the page to the specified theme type.
+ * @param {"light" | "dark"} imageType - image set to be displayed
  */
-function changeBtnIcon(iconType) {
+function setImages(imageType) {
   const sunIcon = document.getElementById("sun-icon");
   const moonIcon = document.getElementById("moon-icon");
-  if (iconType == "sun") {
+  const autheliaLogo = document.querySelector(
+    ".groups-using-makedeb .authelia img"
+  );
+  const prismLauncherLogo = document.querySelector(
+    ".groups-using-makedeb .prism-launcher img"
+  );
+
+  console.log(new URL("wow", autheliaLogo.src));
+
+  if (imageType == "light") {
     moonIcon.classList.remove("active-icon");
     sunIcon.classList.add("active-icon");
+    autheliaLogo.src = new URL("authelia-logo-light.svg", autheliaLogo.src);
+    prismLauncherLogo.src = new URL(
+      "prismlauncher-logo-light.svg",
+      autheliaLogo.src
+    );
   }
-  if (iconType == "moon") {
+
+  if (imageType == "dark") {
     sunIcon.classList.remove("active-icon");
     moonIcon.classList.add("active-icon");
+    autheliaLogo.src = new URL("authelia-logo-dark.svg", autheliaLogo.src);
+    prismLauncherLogo.src = new URL(
+      "prismlauncher-logo-dark.svg",
+      autheliaLogo.src
+    );
   }
 }

@@ -117,10 +117,19 @@ $phone-width: 550px;
     justify-content: center;
     padding-top: 1em;
 
-    a * {
+    .authelia,
+    .prism-launcher {
+      margin: 0.75rem 1rem;
+      align-self: center;
+    }
+
+    .authelia {
+      width: 10rem;
+    }
+
+    .prism-launcher {
       width: auto;
       height: 3.5rem;
-      padding: 0.75rem 1rem;
     }
   }
 }
