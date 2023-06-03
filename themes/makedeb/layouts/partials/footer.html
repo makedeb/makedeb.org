@@ -2,6 +2,10 @@
 	<div class="copyright">
 		<p>&copy; 2022 makedeb Development Team</p>
 	</div>
+	<button class="toggle-btn" id="toggle-theme-button">
+		{{- partial "partials/svg/sun.svg" . -}}
+		{{- partial "partials/svg/moon.svg" . -}}
+	</button>
 	<div class="links">
 		<a href="https://status.{{ .Site.Params.makedeb_url }}">Status</a>
 		<a href="https://{{ .Site.Params.github_url }}/makedeb/makedeb.org">Report an Issue</a>
@@ -9,3 +13,4 @@
 		<a href="/privacy">Privacy</a>
 	</div>
 </footer>
+<script src="/js/theme.js"></script>

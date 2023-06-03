@@ -1,62 +1,64 @@
 @import "variables";
 
 .content-section {
-	margin: 2em;
-	
-	.header {
-		display: flex;
-		align-items: end;
-		padding-bottom: 1em;
+  margin: 2em;
 
-		h1 {
-			font-size: 2em;
-			padding-right: 0.3em;
-		}
+  .header {
+    display: flex;
+    align-items: end;
+    padding-bottom: 1em;
 
-		.rss-icon {
-			color: darken($light-grey, 20%);
-			width: auto;
-			height: 1.4em;
-			transition-property: color;
-			transition-duration: 0.2s;
-		}
+    h1 {
+      font-size: 2em;
+      padding-right: 0.3em;
+    }
 
-		.rss-icon:hover {
-			color: $orange;
-		}
-	}
+    .rss-icon {
+      color: darken($light-grey, 20%);
+      width: auto;
+      height: 1.4em;
+      transition-property: color;
+      transition-duration: 0.2s;
+    }
 
-	.post-card {
-		height: auto;
-		border: solid;
-		border-color: darken($silver, 10%);
-		border-width: 0.15em;
-		background-color: $silver;
-		border-radius: 0.2em;
-		padding: 1em 0.5em;
-		margin-bottom: 0.5em;
-		display: flex;
-		flex-direction: column;
+    .rss-icon:hover {
+      color: $orange;
+    }
+  }
 
-		.date {
-			font-size: 0.9em;
-			padding-bottom: 0.5em;
-			color: lighten($dark-grey, 40%);
-		}
+  .post-card {
+    height: auto;
+    border: solid;
+    border-color: darken($silver, 10%);
+    border-width: 0.15em;
+    @extend .themeCardsColor;
+    border-radius: 0.2em;
+    padding: 1em 0.5em;
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: column;
 
-		.title {
-			font-size: 1.4em;
-			padding-bottom: 0.5em;
-		}
-		
-		.title, .read-more {
-			color: $dark-grey;
-			transition: color 0.2s;
-			width: fit-content;
-		}
+    .date {
+      font-size: 0.9em;
+      padding-bottom: 0.5em;
+      @extend .themePostContentDateColor;
+    }
 
-		.title:hover, .read-more:hover {
-			color: $orange;
-		}
-	}
+    .title {
+      font-size: 1.4em;
+      padding-bottom: 0.5em;
+    }
+
+    .title,
+    .read-more {
+      @extend .themeCardsColor;
+      transition: color 0.2s;
+      width: fit-content;
+    }
+
+    .title:hover,
+    .read-more:hover {
+      color: $orange;
+    }
+  }
 }

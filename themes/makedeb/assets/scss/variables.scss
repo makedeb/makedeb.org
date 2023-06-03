@@ -10,3 +10,82 @@ $silver: #f7f7f7;
 $inactive-link: #919090;
 $header-bg-color: #f2f2f2;
 $header-hg-color: #e6e5e3;
+
+// LIGHT THEME
+.light .themeHeaderColor {
+  background-color: #f2f2f2;
+}
+.light .themeHeaderHrColor {
+  background-color: #e6e5e3;
+}
+.light .themeBackgroundColor {
+  background-color: #fff;
+  color: #262626;
+}
+.light .themeFooterColor {
+  background-color: #262626;
+}
+.light .themeFactsColor {
+  background-color: #f7f7f7;
+}
+.light .themeTextColor {
+  color: #000;
+}
+.light .themeCardsColor {
+  color: #262626;
+  background-color: #f7f7f7;
+}
+.light .themeClipboardCheckedColor {
+  color: #40a85c;
+  background-color: lighten(#d4d4d4, 5%);
+}
+.light .themeCodeColor {
+  color: darken(#d4d4d4, 28%);
+  background-color: lighten(#d4d4d4, 5%);
+}
+.light .themePostContentDateColor {
+  color: lighten($dark-grey, 40%);
+}
+
+// DARK THEME
+.dark .themeHeaderColor {
+  background-color: #1e1e1e;
+}
+.dark .themeHeaderHrColor {
+  color: #111111;
+  background-color: #111111;
+}
+.dark .themeTextColor {
+  color: #fff;
+}
+.dark .themeBackgroundColor {
+  color: #fff;
+  background-color: #2d2d2d;
+  border-color: #464646;
+}
+.dark .themeFactsColor {
+  color: #fff;
+  background-color: #272727;
+}
+.dark .themeCodeColor {
+  color: #fff;
+  background-color: #202020;
+}
+.dark .themeClipboardCheckedColor {
+  color: #40a85c;
+  background-color: #202020;
+}
+.dark .themePostContentDateColor {
+  color: #bfbfbf;
+}
+.dark .themePostHrColor {
+  background-color: #6a6a6a;
+}
+.dark .themeCardsColor {
+  background-color: #262626;
+  border-color: #4d4d4d;
+  color: #fff;
+}
+.dark .themeFooterColor {
+  background-color: #141414;
+}

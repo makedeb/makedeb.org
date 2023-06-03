@@ -3,76 +3,117 @@
 $footer-max-width: 1230px;
 
 footer {
-	height: 100%;
-	padding: 0.8em 0;
-	font-size: 1.1em;
-	background-color: $dark-grey;
-	display: flex;
-	justify-content: space-between;
+  height: 100%;
+  padding: 0.8em 0;
+  font-size: 1.1em;
+  @extend .themeFooterColor;
+  display: flex;
+  justify-content: space-between;
 
-	@media (max-width: $footer-max-width) {
-		flex-direction: column;
-	}
+  @media (max-width: $footer-max-width) {
+    flex-direction: column;
+  }
 
-	p {
-		color: $light-grey;
-		width: fit-content;
-		line-height: 1.2em;
-		text-align: center;
-		padding: 0;
-	}
+  p {
+    color: $light-grey;
+    width: fit-content;
+    line-height: 1.2em;
+    text-align: center;
+    padding: 0;
+  }
 
-	.copyright, .generation-info, .links {
-		align-self: center;
-	}
+  .copyright,
+  .generation-info,
+  .links {
+    align-self: center;
+  }
 
-	@media (max-width: $footer-max-width) {
-		.copyright, .generation-info, .links {
-			padding: 0 0.5em;
-		}
+  @media (max-width: $footer-max-width) {
+    .copyright,
+    .generation-info,
+    .links {
+      padding: 0 0.5em;
+    }
 
-		.generation-info, .links {
-			padding-top: 0.5em;
-		}
-	}
-	
-	.copyright {
-		@media (min-width: $footer-max-width) {
-			margin-left: 0.7em;
-		}
-	}
+    .generation-info,
+    .links {
+      padding-top: 0.5em;
+    }
+  }
 
-	.generation-info {
-		a {
-			color: $light-orange;
-			transition: color 0.2s;
-		}
+  // Toggle theme button
+  .toggle-btn {
+    cursor: pointer;
+    border: none;
+    background-color: rgba(#000, 0);
+    display: flex;
+    justify-content: center;
 
-		a:hover {
-			color: $orange;
-		}
-		
-		@media (max-width: $footer-max-width) {
-			display: none;
-		}
-	}
+    @media (max-width: $footer-max-width) {
+      order: -1;
+      margin-bottom: 0.25rem;
+    }
 
-	.links {
-		text-align: center;
+    .theme-icon {
+      transition-property: fill;
+      transition-duration: 0.2s;
+      display: none;
+      width: 1.2rem;
+      fill: $inactive-link;
 
-		a {
-			color: $light-grey;
-			margin-right: 1em;
-			transition-property: color;
-			transition-duration: 0.2s;
+      &:hover {
+        fill: $orange;
+      }
+    }
 
-			@media (max-width: $footer-max-width) {
-				margin: 0 0.5em;
-			}
-		}
+    .active-icon {
+      display: block;
+    }
+  }
 
-		a:hover {
-			color: $light-orange;
-		}
-	}
+  .copyright {
+    @media (min-width: $footer-max-width) {
+      margin-left: 0.7em;
+    }
+  }
+
+  .copyright {
+    @media (min-width: $footer-max-width) {
+      margin-left: 0.7em;
+    }
+  }
+
+  .generation-info {
+    a {
+      color: $light-orange;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: $orange;
+    }
+
+    @media (max-width: $footer-max-width) {
+      display: none;
+    }
+  }
+
+  .links {
+    text-align: center;
+
+    a {
+      color: $light-grey;
+      margin-right: 1em;
+      transition-property: color;
+      transition-duration: 0.2s;
+
+      @media (max-width: $footer-max-width) {
+        margin: 0 0.5em;
+      }
+    }
+
+    a:hover {
+      color: $light-orange;
+    }
+  }
 }
