@@ -6,6 +6,5 @@ enableEmoji = true
 
 [params]
 	site_desc = "A simplicity-focused packaging tool for Debian archives"
-	hw_url = "hunterwittenborn.com"
 	makedeb_url = "makedeb.org"
 	github_url = "github.com"
