@@ -1,3 +1,6 @@
+> [!WARNING]
+> makedeb is currently unmaintained: https://hunterwittenborn.com/blog/stepping-back-from-open-source/
+
 # makedeb.org
 This is the source code for [makedeb.org](https://makedeb.org), the homepage for the makedeb project.
 
