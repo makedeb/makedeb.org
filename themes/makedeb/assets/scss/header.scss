@@ -99,3 +99,19 @@ header {
   @extend .themeHeaderHrColor;
   height: 0.25em;
 }
+
+.banner {
+  background-color: #ffc107;
+  color: $black;
+  text-align: center;
+  font-weight: bold;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: $black;
+    text-decoration: underline;
+  }
+}
